@@ -63,13 +63,10 @@ for device in buffer:
     except SSHException:
         print ('Make sure SSH is enabled in device.')
         continue
-
-
-
-'''
-This is where the it begins to send the command. It will also create a file per device where the output will
-be stored
-'''
+    '''
+    This is where the it begins to send the command. It will also create a file per device where the output will
+    be stored
+    '''
     print ('Initiating Show Loop Config')
     output = net_connect.send_command(' sh int', delay_factor = 20)
 
